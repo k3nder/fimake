@@ -1,4 +1,3 @@
-#! /usr/bin/fish
 echo "Installing FIMAKE..."
 mkdir ~/.config/fimake
 set -U FIMAKE_HOME "$HOME/.config/fimake/"
