@@ -1,11 +1,13 @@
 #! /usr/bin/fish
 echo "Installing FIMAKE..."
 mkdir ~/.config/fimake
-set -U FIMAKE_HOME "~/.config/fimake/"
+set -U FIMAKE_HOME "$HOME/.config/fimake/"
 echo "
 function fimake
-    ~/.config/fimake/src/main
+    source $HOME/.config/fimake/src/main.fish
 end
-" > ~/.config/fish/fimake.fish
+" > ~/.config/fish/functions/fimake.fish
 git clone https://github.com/k3nder/fimake.git $FIMAKE_HOME
+rm $FIMAKE_HOME/README.md
+rm $FIMAKE_HOME/install.sh
 echo "FIMAKE INSTALLED"
