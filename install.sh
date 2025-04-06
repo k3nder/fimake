@@ -4,7 +4,7 @@ mkdir ~/.config/fimake
 set -U FIMAKE_HOME "$HOME/.config/fimake/"
 echo "
 function fimake
-    source $HOME/.config/fimake/src/main.fish
+    source $HOME/.config/fimake/src/main.fish $argv[1]
 end
 " > ~/.config/fish/functions/fimake.fish
 git clone https://github.com/k3nder/fimake.git $FIMAKE_HOME
